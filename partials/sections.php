@@ -6,7 +6,7 @@ if (have_rows('page_sections')) {
 
 		switch (get_row_layout()) {
 			case 'general':
-				echo Ftw\Helpers::getPartial('sections/section', 'general');
+				echo getPartial('sections/section', 'general');
 				break;
 		}
 	}
