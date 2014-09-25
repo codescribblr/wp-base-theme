@@ -25,10 +25,10 @@ class Setup extends \Ftw\Setup {
 				'menu_title'	=> 'General',
 			));
 
-			// acf_add_options_sub_page(array(
-			// 	'page_title' 	=> 'Contact Settings',
-			// 	'menu_title'	=> 'Contact',
-			// ));
+			acf_add_options_sub_page(array(
+				'page_title' 	=> 'Contact Settings',
+				'menu_title'	=> 'Contact',
+			));
 		}
 	}
 
