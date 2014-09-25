@@ -10,7 +10,9 @@ class PostTypes {
 	public function registerAll() {}
 	public function removeMetaBoxes() {}
 
-	protected function registerPostType($key, $name, $singular, $plural, $desc, $icon, $taxonomies = array()) {
+	protected function registerPostType($key, $name, $singular, $plural, $icon, $taxonomies = array(), $desc = null) {
+		if (!$desc) $desc = $plural;
+
 		$labels = array(
 			'name'                => $plural,
 			'singular_name'       => $singular,
