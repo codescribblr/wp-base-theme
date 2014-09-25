@@ -5,20 +5,32 @@ if (have_rows('modules')) {
 		the_row();
 
 		switch (get_row_layout()) {
-			case 'content_with_sidebar':
-				echo Ftw\Helpers::getPartial('modules/module', 'content-with-sidebar');
+			case 'heading':
+				echo getPartial('modules/module', 'heading');
+				break;
+			case 'paragraph':
+				echo getPartial('modules/module', 'paragraph');
+				break;
+			case 'btn':
+				echo getPartial('modules/module', 'btn');
+				break;
+			case 'hr':
+				echo '<hr />';
+				break;
+			case 'spacing':
+				if ($size = get_sub_field('size')) echo '<div style="clear: both; height: ' . $size . 'px;"></div>';
 				break;
 			case 'full_width_content':
 				the_sub_field('content');
 				break;
-			case 'heading_with_subheading':
-				echo Ftw\Helpers::getPartial('modules/module', 'heading-with-subheading');
+			case 'cols_2':
+				echo getPartial('modules/module', 'cols-2');
 				break;
-			case 'three_columns':
-				echo Ftw\Helpers::getPartial('modules/module', 'three-columns');
+			case 'cols_3':
+				echo getPartial('modules/module', 'cols-3');
 				break;
-			case 'horizontal_divider':
-				echo '<hr />';
+			case 'cols_4':
+				echo getPartial('modules/module', 'cols-4');
 				break;
 		}
 	}
