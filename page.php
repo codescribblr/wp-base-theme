@@ -21,6 +21,7 @@ if (!get_field('page_header_hide')): ?>
 </div>
 <?php endif;
 
+$pageId = get_the_ID();
 include 'partials/sections.php';
 
 endwhile;

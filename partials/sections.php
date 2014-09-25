@@ -1,7 +1,7 @@
 <?php
 
-if (have_rows('page_sections')) {
-	while (have_rows('page_sections')) {
+if (have_rows('page_sections', $pageId)) {
+	while (have_rows('page_sections', $pageId)) {
 		the_row();
 
 		switch (get_row_layout()) {
