@@ -6,6 +6,7 @@ use Less_Parser;
 class Assets {
 
 	protected $mainStylesheet;
+	protected $googleFonts = [];
 
 	public function __construct() {
 		$this->load();
@@ -24,6 +25,17 @@ class Assets {
 		);
 
 		$this->mainStylesheet = Less_Cache::Get($files, $options);
+	}
+
+	public function addGoogleFont($font) {
+		array_push($this->googleFonts, $font);
+	}
+
+	public function getGoogleFontsUri() {
+		$uri = 'http://fonts.googleapis.com/css?family=';
+		$uri .= implode('|', $this->googleFonts);
+
+		return $uri;
 	}
 
 }
