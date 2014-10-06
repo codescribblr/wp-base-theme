@@ -14,6 +14,9 @@ if (have_rows('modules')) {
 			case 'btn':
 				echo getPartial('modules/module', 'btn');
 				break;
+			case 'img':
+				echo getPartial('modules/module', 'img');
+				break;
 			case 'hr':
 				echo '<hr />';
 				break;
