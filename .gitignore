@@ -1,7 +1,5 @@
 
 .DS_Store
-cache/*
 /vendor/
 /assets/vendor/
-/assets/css/cache
 style.css.map
